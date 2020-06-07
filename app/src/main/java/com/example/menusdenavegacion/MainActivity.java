@@ -8,6 +8,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -16,9 +17,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
+public class MainActivity extends AppCompatActivity {
+    ProductoListFragment mProductoListFragment;
     private AppBarConfiguration mAppBarConfiguration;
+
+    FragmentManager fm=getSupportFragmentManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout); //creamos un contenedor drawer sobre el cual se pondran las otras views
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each ; pasar cada Id como un menu
@@ -49,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         //NavigaationUI conecta elementos  de drawer o btones , barras de navegacion  que tengan su NavController
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration); //actualiza el titulo de la barra de accion
         NavigationUI.setupWithNavController(navigationView, navController); //actualiza titulo de la barra de  herramientas
+
     }
 
     @Override
