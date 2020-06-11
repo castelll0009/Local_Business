@@ -16,12 +16,12 @@ import java.util.List;
 public class ProductoRecyclerViewAdapter extends RecyclerView.Adapter<ProductoRecyclerViewAdapter.ViewHolder> {
     //Step 1 of 3: Defines a variable for listening user interactions with the items list
     private static View.OnClickListener mOnItemClickListener; //variable que escuchara las interaciones con los items de la lista list_item_pruductos
+    private static View.OnClickListener botonComprarListener; //variable que escuchara las interaciones con los items de la lista list_item_pruductos
     private static final NumberFormat PRICE_FORMAT = new DecimalFormat("");
     //Step 2 of 3: Assign itemClickListener to your local View.OnClickListener variable
     public void setOnItemClickListener(View.OnClickListener itemClickListener) {
         mOnItemClickListener = itemClickListener;
     }
-
     /*
     public static class ViewHolder extends RecyclerView.ViewHolder{
         TextView nombreProducto;

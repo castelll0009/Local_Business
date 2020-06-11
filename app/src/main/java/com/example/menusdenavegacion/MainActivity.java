@@ -3,6 +3,7 @@ package com.example.menusdenavegacion;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.view.WindowManager;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -59,22 +61,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration); //actualiza el titulo de la barra de accion
         NavigationUI.setupWithNavController(navigationView, navController); //actualiza titulo de la barra de  herramientas
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-        //FragmentManager fm=getSupportFragmentManager();
-// Android will automatically re-add any Fragments that
-// have previously been added after a configuration change, // so only add it if this isn't an automatic restart.
-        /*
-        if(savedInstanceState==null){
-            FragmentTransaction ft=fm.beginTransaction();
-            mProductoListFragment=new ProductoListFragment2(); //creamos un adaptapor del productoListFragment
-            ft.add(R.id.main_activity_frame,
-                    //ft.add(R.id.drawer_layout,
-                    mProductoListFragment,TAG_LIST_FRAGMENT);
-            ft.commitNow();
-        }else{
-            mProductoListFragment=(ProductoListFragment2) fm.findFragmentByTag(TAG_LIST_FRAGMENT);
-        }
-*/
-        //mProductoListFragment=new ProductoListFragment2(); //creamos un adaptapor del productoListFragment
     }
 
     @Override

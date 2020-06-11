@@ -59,7 +59,6 @@ public class Earthquake {
 }
 */
 
-import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.widget.ImageView;
 
@@ -67,6 +66,8 @@ import androidx.databinding.BindingAdapter;
 
 import com.squareup.picasso.Picasso;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Date;
 
 public class Producto {
@@ -108,6 +109,10 @@ public class Producto {
     public double getPrecio() {
         return mPrecio;
 } //magnitude
+    private static final NumberFormat PRICE_FORMAT_DETAIL = new DecimalFormat("");
+    public String getPrecioFormatDecimal() {
+        return PRICE_FORMAT_DETAIL.format(mPrecio);
+    }
 
     public String getmPrecioConvertidoString(){
         return Double.toString(mPrecio);
