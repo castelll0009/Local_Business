@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-
+/*
 public class ProductoMainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private static final String TAG_LIST_FRAGMENT="TAG_LIST_FRAGMENT";
@@ -45,7 +45,7 @@ public class ProductoMainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         //////////////////////////////////////////////////////////////////
-        */
+
 
         FragmentManager fm=getSupportFragmentManager();
 // Android will automatically re-add any Fragments that
@@ -73,7 +73,7 @@ public class ProductoMainActivity extends AppCompatActivity {
                 "https://scontent-scl2-1.xx.fbcdn.net/v/t1.0-0/p180x540/101343339_2460457124266112_5012038852303388672_o.jpg?_nc_cat=100&_nc_sid=e007fa&_nc_ohc=i72zQ9c_kr0AX-cGZKZ&_nc_ht=scontent-scl2-1.xx&_nc_tp=6&oh=dd0e2df1c0b0170c7f5e5300b8de0fe8&oe=5EF9E8B2",0));
         dummyQuakes.add(new Producto("4",now,"Xbox ",null ,1000,"El hp de Rodas","3118978720",
                 "https://scontent-scl1-1.xx.fbcdn.net/v/t1.0-9/p720x720/100669794_2460457040932787_3976913985499824128_o.jpg?_nc_cat=108&_nc_sid=e007fa&_nc_ohc=Lfz9gFh-ZvwAX_3XFha&_nc_ht=scontent-scl1-1.xx&_nc_tp=6&oh=58d7825c8bd50cdf1dd902036729600d&oe=5EFAA0E3",0));
-
+/*
         mProductoListFragment.setProductos(dummyQuakes);
 
 
@@ -92,6 +92,7 @@ public class ProductoMainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-    */
+
 
 }
+*/

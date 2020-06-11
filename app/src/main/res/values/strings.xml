@@ -10,7 +10,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-
+    <string name="menu_lista_productos">Lista Productos</string>
     <string name="home_second">Home Second</string>
 
 
@@ -18,4 +18,7 @@
     <string name="este_producto_es_de_excelente_calidad_recomendado_por_muchos_usuarios_ademas_esta_a_muy_bajo_costo_el_dia_de_hoy_no_desperdicie_esta_oportunidad_es_unica_recuerda_que_si_necesitas_mas_informacion_contactame">Este producto es de excelente calidad, recomendado por muchos usuarios, ademas esta a muy bajo costo el dia de hoy no desperdicie esta oportunidad es unica, recuerda que si necesitas mas informacion, Contactame.</string>
     <string name="descripcion">Descripcion:</string>
     <string name="text_nuevo">Nuevo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

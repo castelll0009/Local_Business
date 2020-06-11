@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <variable
             name="priceFormat"
             type="java.text.NumberFormat" />
@@ -17,7 +16,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:context=".ProductoListFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -40,7 +40,8 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/caja"
                         android:scaleType="matrix"
-                        app:imageUrl="@{producto.urlImage}" />
+                        app:imageUrl="@{producto.urlImage}"/>
+
 
                     <TextView
                         android:id="@+id/textViewIsNew"
@@ -55,7 +56,9 @@
                         android:textAlignment="center"
                         android:textColor="#ffffff"
                         android:textSize="12sp"
-                        android:visibility="@{producto.is_new == 0 ? View.INVISIBLE : View.VISIBLE}" />
+                        android:visibility="@{producto.is_new == 0 ? View.INVISIBLE : View.VISIBLE}"/>
+
+
 
                     <TextView
                         android:id="@+id/textViewRating"
@@ -129,7 +132,7 @@
                     android:padding="10dp">
 
                     <Button
-                        android:id="@+id/botton_buy_detail"
+                        android:id="@+id/botton_buy"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -142,18 +145,18 @@
                         android:id="@+id/textview_nombre_producto"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@{producto.nombre}"
                         android:textColor="@android:color/background_light"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:text="@{producto.nombre}"/>
 
                     <TextView
                         android:id="@+id/textview_propietario"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textview_nombre_producto"
-                        android:text="@{producto.propietario}"
                         android:textColor="@android:color/darker_gray"
-                        android:textStyle="normal" />
+                        android:textStyle="normal"
+                        android:text="@{producto.propietario}"/>
 
                 </RelativeLayout>
 
@@ -182,7 +185,7 @@
                         app:layout_constraintVertical_bias="0.344">
 
                         <TextView
-                            android:id="@+id/textViewType"
+                            android:id="@+id/textView_telefono"
                             android:layout_width="120dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
@@ -192,7 +195,6 @@
                             android:background="@drawable/textview_border_background"
                             android:gravity="center_horizontal"
                             android:padding="2dp"
-                            android:text="@{producto.telefono}"
                             android:textAlignment="center"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                             android:textColor="#EC020202"
@@ -202,17 +204,19 @@
                             app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toEndOf="@+id/imageView8"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.538" />
+                            app:layout_constraintVertical_bias="0.538"
+                            android:text="@{producto.telefono}"/>
+
 
                         <ImageView
                             android:id="@+id/imageView8"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/textViewType"
-                            app:layout_constraintEnd_toStartOf="@+id/textViewType"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView_telefono"
+                            app:layout_constraintEnd_toStartOf="@+id/textView_telefono"
                             app:layout_constraintHorizontal_bias="0"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/textViewType"
+                            app:layout_constraintTop_toTopOf="@+id/textView_telefono"
                             app:layout_constraintVertical_bias="0.0"
                             app:srcCompat="@drawable/ic_perm_phone_msg_black_24dp" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -221,20 +225,19 @@
                         android:id="@+id/imageView4"
                         android:layout_width="31dp"
                         android:layout_height="37dp"
-                        app:layout_constraintBottom_toBottomOf="@id/button_number"
-                        app:layout_constraintEnd_toStartOf="@id/button_number"
-                        app:layout_constraintRight_toLeftOf="@+id/button_number"
-                        app:layout_constraintTop_toTopOf="@+id/button_number"
+                        app:layout_constraintBottom_toBottomOf="@id/button_precio"
+                        app:layout_constraintEnd_toStartOf="@id/button_precio"
+                        app:layout_constraintRight_toLeftOf="@+id/button_precio"
+                        app:layout_constraintTop_toTopOf="@+id/button_precio"
                         app:layout_constraintVertical_bias="0.0"
                         app:srcCompat="@drawable/ic_signo_peso" />
 
                     <Button
-                        android:id="@+id/button_number"
+                        android:id="@+id/button_precio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/verde_marino_button_layout_background"
                         android:gravity="center|right"
-                        android:text="@{priceFormat.format(producto.precio)}"
                         android:textColor="#FFFFFF"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -243,8 +246,8 @@
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0" />
-
+                        app:layout_constraintVertical_bias="0"
+                        android:text="@{priceFormat.format(producto.precio)}"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -59,6 +59,7 @@ public class Earthquake {
 }
 */
 
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.widget.ImageView;
 
@@ -69,9 +70,6 @@ import com.squareup.picasso.Picasso;
 import java.util.Date;
 
 public class Producto {
-    /**
-     * Properties with information about the earthquake
-     */
     private String mId;
     private Date mDate;
     private String mNombre;
@@ -114,7 +112,6 @@ public class Producto {
     public String getmPrecioConvertidoString(){
         return Double.toString(mPrecio);
     }
-
 
     public String getTelefono(){
         return mTelefono;
@@ -161,6 +158,7 @@ public class Producto {
     public static void loadImage(ImageView view, String imageUrl) {
         Picasso.get().load(imageUrl).into(view);
     }
+
 /*
     @BindingAdapter({"bind:imageUrl"})
     public static void loadImage(ImageView view, String imageUrl) {
@@ -175,13 +173,14 @@ public class Producto {
                 .into(view);
     }*/
 /*
-    @BindingAdapter() BindingAdapter({"bind:imageUrl"})
+    @BindingAdapter({"bind:imageUrl"})
     public static void loadImage(ImageView view, String imageUrl) {
+        Picasso.get().load(imageUrl).placeholder(Drawable.createFromXml(R.drawable))
         Picasso.with(view.getContext())
                 .load(imageUrl)
                 .placeholder(R.drawable.placeholder)
                 .into(view);
-    }
+    }*/
 
- */
+
 }

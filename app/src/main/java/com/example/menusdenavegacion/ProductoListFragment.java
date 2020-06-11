@@ -12,10 +12,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
-
-
+/*
 public class ProductoListFragment extends Fragment {
+
     private ArrayList<Producto> mProductos = new ArrayList<Producto>();
 
     private RecyclerView mRecyclerView;
@@ -39,6 +41,7 @@ public class ProductoListFragment extends Fragment {
            // Toast.makeText(getContext(), "You Clicked: " + thisItem.getNombre(), Toast.LENGTH_SHORT).show();
 
             /******************************* Add this code **********************************/
+/*
             //Create the intent for navigation purposes; the context is the current Activity, so getActivity() must be called
             Intent i = new Intent(getActivity(), ProductoDetailActivity.class);
             //Set information in the intent for the next Activity
@@ -50,10 +53,10 @@ public class ProductoListFragment extends Fragment {
             //i.putExtra("LOCATION", thisItem.getLocation());
             //Launch the new Activity
             startActivity(i);
-            /******************************* Add this code **********************************/
+
         }
     };
-//*************************** Add this code *************************************
+
 
     public ProductoListFragment() {
     }
@@ -99,6 +102,55 @@ public class ProductoListFragment extends Fragment {
                         .notifyItemInserted(mProductos.indexOf(producto));
             }
         }
+    }
+
+}
+*/
+
+public class   ProductoListFragment extends Fragment{
+    private RecyclerView RecyclerViewProductos;
+    private ProductoRecyclerViewAdapter adaptadorProductos;
+    private LinearLayoutManager layoutManager;
+    private Producto adaptador;
+
+    public ProductoListFragment(){
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view= inflater.inflate(R.layout.fragment_producto_list, container, false);
+
+        RecyclerViewProductos=(RecyclerView)view.findViewById(R.id.list);
+        layoutManager= new LinearLayoutManager(getActivity());
+        RecyclerViewProductos.setLayoutManager(layoutManager);
+
+        adaptadorProductos=new ProductoRecyclerViewAdapter(obtenerProducto());
+        RecyclerViewProductos.setAdapter(adaptadorProductos);
+
+        return view;
+    }
+
+    public List<Producto> obtenerProducto() {
+        List<Producto> ListaProductos=new ArrayList<>();
+
+
+        Date now = Calendar.getInstance().getTime(); // para obtener  la hora actual
+        ListaProductos.add(new Producto("0",now,"Arepas rellenas de carne",null,100000000,"Jhojan Herrera el pri","3118978755",
+                "https://scontent-scl1-1.xx.fbcdn.net/v/t1.0-9/100823282_2460372657607892_6174919290852999168_n.jpg?_nc_cat=111&_nc_sid=e007fa&_nc_ohc=VQLnFLGIccAAX8a_F0g&_nc_ht=scontent-scl1-1.xx&oh=e19cd19994975f51ef8e1d5ee65c8437&oe=5EFA555F", 1));
+        ListaProductos.add(new Producto("2",now,"Moto Kawasaki",null ,800000,"Yohan buritica","3118978755",
+                "https://i.pinimg.com/564x/12/2a/82/122a82a8f01fbd35a975f7337a6fc5d0.jpg",0));
+        ListaProductos.add(new Producto("1",now,"Televisor SAMSUNG 32 pulgadas",null ,60000,"Dulcilandia ","3118978755",
+                "https://scontent-scl2-1.xx.fbcdn.net/v/t1.0-9/101575565_2460876410890850_2586019196403974144_n.jpg?_nc_cat=107&_nc_sid=e007fa&_nc_ohc=bXJcPuYMuqUAX__0vlu&_nc_ht=scontent-scl2-1.xx&oh=81b0606e24805f57765bdab32ce6dcfd&oe=5EFB97D7",0));
+        ListaProductos.add(new Producto("3",now,"Ancheta del dia de las Madres",null ,50000,"La mama de chucho","3118978720",
+                "https://scontent-scl2-1.xx.fbcdn.net/v/t1.0-0/p180x540/101343339_2460457124266112_5012038852303388672_o.jpg?_nc_cat=100&_nc_sid=e007fa&_nc_ohc=i72zQ9c_kr0AX-cGZKZ&_nc_ht=scontent-scl2-1.xx&_nc_tp=6&oh=dd0e2df1c0b0170c7f5e5300b8de0fe8&oe=5EF9E8B2",0));
+        ListaProductos.add(new Producto("4",now,"Xbox ",null ,1000,"El hp de Rodas","3118978720",
+                "https://scontent-scl1-1.xx.fbcdn.net/v/t1.0-9/p720x720/100669794_2460457040932787_3976913985499824128_o.jpg?_nc_cat=108&_nc_sid=e007fa&_nc_ohc=Lfz9gFh-ZvwAX_3XFha&_nc_ht=scontent-scl1-1.xx&_nc_tp=6&oh=58d7825c8bd50cdf1dd902036729600d&oe=5EFAA0E3",0));
+
+
+        return ListaProductos;
     }
 
 }

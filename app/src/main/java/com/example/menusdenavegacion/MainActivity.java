@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each ; pasar cada Id como un menu
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,R.id.nav_lista_productos)
                 .setDrawerLayout(drawer)//mete las views en los drawer dibujables
                 .build();
         //NavController gestiona la navegacion de la  app con un NavHost
@@ -65,16 +65,16 @@ public class MainActivity extends AppCompatActivity {
         /*
         if(savedInstanceState==null){
             FragmentTransaction ft=fm.beginTransaction();
-            mProductoListFragment=new ProductoListFragment(); //creamos un adaptapor del productoListFragment
+            mProductoListFragment=new ProductoListFragment2(); //creamos un adaptapor del productoListFragment
             ft.add(R.id.main_activity_frame,
                     //ft.add(R.id.drawer_layout,
                     mProductoListFragment,TAG_LIST_FRAGMENT);
             ft.commitNow();
         }else{
-            mProductoListFragment=(ProductoListFragment) fm.findFragmentByTag(TAG_LIST_FRAGMENT);
+            mProductoListFragment=(ProductoListFragment2) fm.findFragmentByTag(TAG_LIST_FRAGMENT);
         }
 */
-        //mProductoListFragment=new ProductoListFragment(); //creamos un adaptapor del productoListFragment
+        //mProductoListFragment=new ProductoListFragment2(); //creamos un adaptapor del productoListFragment
     }
 
     @Override

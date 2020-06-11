@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.menusdenavegacion.databinding.ListItemProductoBinding;
@@ -12,114 +13,84 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.List;
 
-//import edu.unicauca.earthquake.databinding.ListItemProductoBinding;
-
-
 public class ProductoRecyclerViewAdapter extends RecyclerView.Adapter<ProductoRecyclerViewAdapter.ViewHolder> {
-    private final List<Producto> mProductos;
-    //***** Add this code to ProductoRecyclerViewAdapter variables definition section ********
-    //private static final SimpleDateFormat TIME_FORMAT = new SimpleDateFormat("HH:mm", Locale.US);
-    private static final NumberFormat PRICE_FORMAT = new DecimalFormat("");
     //Step 1 of 3: Defines a variable for listening user interactions with the items list
-    private static View.OnClickListener mOnItemClickListener;
-
+    private static View.OnClickListener mOnItemClickListener; //variable que escuchara las interaciones con los items de la lista list_item_pruductos
+    private static final NumberFormat PRICE_FORMAT = new DecimalFormat("");
     //Step 2 of 3: Assign itemClickListener to your local View.OnClickListener variable
     public void setOnItemClickListener(View.OnClickListener itemClickListener) {
         mOnItemClickListener = itemClickListener;
     }
 
-    public ProductoRecyclerViewAdapter(List<Producto> productos) {
-        mProductos = productos;
+    /*
+    public static class ViewHolder extends RecyclerView.ViewHolder{
+        TextView nombreProducto;
+        TextView nombrePropietario;
+        TextView telefono;
+        TextView precio;
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            nombreProducto =(TextView)itemView.findViewById(R.id.textview_nombre_producto);
+            nombrePropietario =(TextView)itemView.findViewById(R.id.textview_propietario);
+            precio =(TextView)itemView.findViewById(R.id.button_precio);
+            telefono =(TextView)itemView.findViewById(R.id.textView_telefono);
+        }
+    }*/
+    public static class ViewHolder extends RecyclerView.ViewHolder{
+
+    public final ListItemProductoBinding bindingProducto;
+        public ViewHolder(ListItemProductoBinding bindingProducto) {
+            super(bindingProducto.getRoot());
+            this.bindingProducto = bindingProducto;
+            bindingProducto.setPriceFormat(PRICE_FORMAT);
+            //Step 3 of 3: setTag() como titular de la vista actual junto con
+            //setOnClickListener () como su variable local View.OnClickListener.
+            // Puede configurar el mismo mOnItemClickListener en varias vistas si es necesario
+            // y luego diferenciar esos clics usando la identificación de la vista.
+            itemView.setTag(this);
+            itemView.setOnClickListener(mOnItemClickListener);
+            itemView.findViewById(R.id.botton_buy); // identificar el click a buttton_buy_detail
+        }
     }
 
+    public List<Producto> productosLista;
+//le pasamos la lista que tiene el recycler a la lista que acabamos de crear
+    public ProductoRecyclerViewAdapter(List<Producto> productosLista) {
+        this.productosLista = productosLista;
+    }
+/*
+    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        ListItemProductoBinding binding = ListItemProductoBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
-        return new ViewHolder(binding);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_producto,parent,false);
+        ViewHolder viewHolder=new ViewHolder(view, bindingProducto);
+        return viewHolder;
+    }
+
+
+
+    @Override
+    public void onBindViewHolder(@NonNull ProductoRecyclerViewAdapter.ViewHolder holder, int position) {
+        holder.nombreProducto.setText(productosLista.get(position).getNombre());
+        holder.nombrePropietario.setText(productosLista.get(position).getPropietario());
+        holder.telefono.setText(productosLista.get(position).getTelefono());
+        holder.precio.setText(PRICE_FORMAT.format(productosLista.get(position).getPrecio()) );
+    }*/
+@Override
+public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    ListItemProductoBinding binding = ListItemProductoBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+    return new ViewHolder(binding);
+}
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        Producto producto = productosLista.get(position);
+        holder.bindingProducto.setProducto(producto);
+        holder.bindingProducto.executePendingBindings();
     }
 
     @Override
     public int getItemCount() {
-        return mProductos.size();
+    return productosLista.size();
     }
-
-/*
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public final View parentView;
-        public final TextView detailsView;
-        public Producto producto;
-
-        public ViewHolder(View view) {
-            super(view);
-            parentView = view;
-            detailsView = (TextView)
-                    view.findViewById(R.id.list_item_producto_details);
-        }
-
-        @Override
-        public String toString() {
-            return super.toString() + " '" + detailsView.getText() + "'";
-        }
-    }*/
-
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-    /*
-       //public final TextView date;
-       public final TextView nombre;
-       public final TextView propietario;
-       public final TextView precio;
-       public final TextView telefono;
-
-
-    public ViewHolder(View view) {
-        super(view);
-        //date = (TextView) view.findViewById(R.id.date);
-        propietario = (TextView) view.findViewById(R.id.propietario);
-        nombre = (TextView) view.findViewById(R.id.nombreProducto);
-        precio = (TextView) view.findViewById(R.id.precio);
-        telefono = (TextView) view.findViewById(R.id.telefono);
-    }
-   */
-    public final ListItemProductoBinding binding;
-
-        public ViewHolder(ListItemProductoBinding binding) {
-            super(binding.getRoot());
-            this.binding = binding;
-            //binding.setTimeformat(TIME_FORMAT);
-            //binding.setMagnitudeformat(MAGNITUDE_FORMAT);
-            binding.setPriceFormat(PRICE_FORMAT);
-
-            //Step 3 of 3: setTag() as current view holder along with
-            // setOnClickListener() as your local View.OnClickListener variable.
-            // You can set the same mOnItemClickListener on multiple views if required
-            // and later differentiate those clicks using view's id.
-            //funcion para poder clickear sobre diferentes items usando su id
-            itemView.setTag(this);
-            itemView.setOnClickListener(mOnItemClickListener);
-        }
-    }
-/*
-    @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.producto = mProductos.get(position);
-        holder.detailsView.setText(mProductos.get(position).toString());
-    }*/
-/*
-    @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        Producto earthquake = mProductos.get(position);
-        //holder.date.setText(TIME_FORMAT.format(earthquake.getDate()));
-        holder.nombre.setText(earthquake.getNombre());
-        holder.propietario.setText(earthquake.getPropietario());
-        holder.telefono.setText(earthquake.getTelefono());
-        holder.precio.setText(
-                PRECIO_FORMAT.format(earthquake.getPrecio()));
-    }*/
-    @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        Producto producto = mProductos.get(position);
-        holder.binding.setProducto(producto);
-        holder.binding.executePendingBindings();
-    }
-
 }
+
