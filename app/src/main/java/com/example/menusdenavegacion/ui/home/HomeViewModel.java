@@ -1,8 +1,22 @@
 package com.example.menusdenavegacion.ui.home;
 
+import android.os.Bundle;
+
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+import androidx.navigation.ui.AppBarConfiguration;
+
+import com.example.menusdenavegacion.Producto;
+import com.example.menusdenavegacion.ProductoListFragment;
+import com.example.menusdenavegacion.R;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 //Se diseñó la clase ViewModel a fin de almacenar y administrar datos relacionados con la IU de
 // manera optimizada para los ciclos de vida. La clase ViewModel permite que los datos sobrevivan a cambios
 // de configuración, como las rotaciones de pantallas.
@@ -22,4 +36,5 @@ public class HomeViewModel extends ViewModel {
     public LiveData<String> getText() {
         return mText;
     }
+
 }

@@ -12,18 +12,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-
 public class ProductoMainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private static final String TAG_LIST_FRAGMENT="TAG_LIST_FRAGMENT";
-
-
     ProductoListFragment mProductoListFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_framer_productos);
 /*
         /////////barra de herramientas///////////////////////////
         Toolbar toolbar = findViewById(R.id.toolbar);

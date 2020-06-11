@@ -9,6 +9,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -23,10 +24,9 @@ import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    ProductoListFragment mProductoListFragment;
     private AppBarConfiguration mAppBarConfiguration;
-
-    FragmentManager fm=getSupportFragmentManager();
+    private static final String TAG_LIST_FRAGMENT="TAG_LIST_FRAGMENT";
+    ProductoListFragment mProductoListFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +58,23 @@ public class MainActivity extends AppCompatActivity {
         //NavigaationUI conecta elementos  de drawer o btones , barras de navegacion  que tengan su NavController
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration); //actualiza el titulo de la barra de accion
         NavigationUI.setupWithNavController(navigationView, navController); //actualiza titulo de la barra de  herramientas
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+        //FragmentManager fm=getSupportFragmentManager();
+// Android will automatically re-add any Fragments that
+// have previously been added after a configuration change, // so only add it if this isn't an automatic restart.
+        /*
+        if(savedInstanceState==null){
+            FragmentTransaction ft=fm.beginTransaction();
+            mProductoListFragment=new ProductoListFragment(); //creamos un adaptapor del productoListFragment
+            ft.add(R.id.main_activity_frame,
+                    //ft.add(R.id.drawer_layout,
+                    mProductoListFragment,TAG_LIST_FRAGMENT);
+            ft.commitNow();
+        }else{
+            mProductoListFragment=(ProductoListFragment) fm.findFragmentByTag(TAG_LIST_FRAGMENT);
+        }
+*/
+        //mProductoListFragment=new ProductoListFragment(); //creamos un adaptapor del productoListFragment
     }
 
     @Override

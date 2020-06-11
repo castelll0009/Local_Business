@@ -1,10 +1,11 @@
 package com.example.menusdenavegacion.ui.gallery;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class GalleryViewModel extends ViewModel  {
 
     private MutableLiveData<String> mText;
 
