@@ -28,4 +28,12 @@
         android:name="com.example.menusdenavegacion.ProductoListFragment"
         android:label="@string/menu_lista_productos"
         tools:layout="@layout/list_item_producto" />
+    <fragment
+        android:id="@+id/nav_loginFragment"
+        android:name="com.example.menusdenavegacion.ui.login.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/nav_registerFragment"
+        android:name="com.example.menusdenavegacion.ui.login.RegisterFragment"
+        android:label="RegisterFragment" />
 </navigation>

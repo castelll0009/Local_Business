@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.button.MaterialButtonToggleGroup;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -115,6 +118,7 @@ public class   ProductoListFragment extends Fragment{
     private ProductoRecyclerViewAdapter adaptadorProductos;
     private LinearLayoutManager layoutManager;
     private Producto adaptador;
+    View viewBotones;
     // set a listener to handle events from RecyclerView
     private View.OnClickListener onItemClickListener = new View.OnClickListener() {
 
@@ -153,6 +157,7 @@ public class   ProductoListFragment extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_producto_list, container, false);
+        Button botonComprar;
 
         RecyclerViewProductos=(RecyclerView)view.findViewById(R.id.list);
         layoutManager= new LinearLayoutManager(getActivity());
@@ -162,6 +167,8 @@ public class   ProductoListFragment extends Fragment{
         RecyclerViewProductos.setAdapter(adaptadorProductos);
         //Step 1 of 4: Create and set OnItemClickListener to the adapter.
         adaptadorProductos.setOnItemClickListener(onItemClickListener); //configuramos un escuchador para el adaptador
+        ////navegacion de  botonoes de  la lista de prtoductos/////
+        //botonComprar = (Button) view.findViewById(R.id.botton_buy);
 
         return view;
     }

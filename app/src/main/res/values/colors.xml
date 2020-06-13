@@ -6,5 +6,10 @@
     <color name="colorAmarilloApp">#FFC107</color>
     <color name="colorVerdeNegocio">#009688</color>
     <color name="colorNaranjaNegocio">#FF9800</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="gris_hind">#E9E9E9</color>
+    <color name="negro">#000000</color>
+    <color name="color_boton_login">#00C508</color>
+    <color name="verde_boton_login">#4CAF50</color>
 
 </resources>

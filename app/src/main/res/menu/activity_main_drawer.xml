@@ -30,11 +30,11 @@
     <item  android:title="@string/menu_control_cuentas">
         <menu>
             <item
-                android:id="@+id/nav_login"
+                android:id="@+id/nav_loginFragment"
                 android:icon="@drawable/ic_comentario"
                 android:title="@string/menu_iniciar_sesion" />
             <item
-                android:id="@+id/nav_cambiar_cuenta"
+                android:id="@+id/nav_registerFragment"
                 android:icon="@drawable/ic_menu_gallery"
                 android:title="@string/menu_cambiar_cuenta" />
             <item
