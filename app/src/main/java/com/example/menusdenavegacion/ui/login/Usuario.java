@@ -69,6 +69,12 @@ public class Usuario {
     public String getUrlFoto(){
         return mUrlFoto;
     }
+    public Usuario(String nombre, String email, String password, String telefono){
+        mNombre = nombre;
+        mEmail = email;
+        mPassword = password;
+        mTelefono = telefono;
+    }
     public Usuario(String id, String email, String password, String nombre, Location location, double saldo, String Telefono, String urlFoto){
         mId = id;
         mEmail = email;

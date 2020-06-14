@@ -27,12 +27,12 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar); // Este método establece la barra de herramientas como la barra de la app de la actividad
         FloatingActionButton fab = findViewById(R.id.fab); //define un boton flotante en activity_main
@@ -76,5 +76,10 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration) //llena el nav_host con el elemento selecionado del menu
                 || super.onSupportNavigateUp();
+    }
+
+   public  boolean sesion = false;
+    public boolean getSesion(){
+        return sesion;
     }
 }

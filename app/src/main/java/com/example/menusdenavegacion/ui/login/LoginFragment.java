@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,16 +19,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.menusdenavegacion.MainActivity;
+import com.example.menusdenavegacion.Producto;
 import com.example.menusdenavegacion.R;
 
+import java.util.ArrayList;
 import java.util.zip.Inflater;
 
 
 public class LoginFragment extends Fragment {
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         Button loginBoton;
         TextView textviewRegister;
         View view = inflater.inflate(R.layout.fragment_login, container, false);
@@ -55,6 +58,7 @@ public class LoginFragment extends Fragment {
                 String passwordUsaurio = editTextPasswordUsuario.getText().toString();
                 if(mUsuario.getEmail().equals(emailUsaurio) && mUsuario.getPassword().equals(passwordUsaurio) ){
                     // logro iniciar secion contraseña y correo validos
+                    informacionGlobal.SESION =true;
                     Intent  i  = new Intent(getActivity(), MainActivity.class);
                     //i.putExtra("TRUE",Lo)
                     startActivity(i);

@@ -49,7 +49,6 @@ public class ProductoRecyclerViewAdapter extends RecyclerView.Adapter<ProductoRe
             // y luego diferenciar esos clics usando la identificación de la vista.
             itemView.setTag(this);
             itemView.setOnClickListener(mOnItemClickListener);
-            itemView.findViewById(R.id.botton_buy); // identificar el click a buttton_buy_detail
         }
     }
 

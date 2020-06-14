@@ -112,7 +112,6 @@ public class ProductoListFragment extends Fragment {
 */
 
 public class   ProductoListFragment extends Fragment{
-    //List<Producto> ListaProductos=new ArrayList<>();
     private ArrayList<Producto> ListaProductos = new ArrayList<Producto>();
     private RecyclerView RecyclerViewProductos;
     private ProductoRecyclerViewAdapter adaptadorProductos;
@@ -168,7 +167,6 @@ public class   ProductoListFragment extends Fragment{
         //Step 1 of 4: Create and set OnItemClickListener to the adapter.
         adaptadorProductos.setOnItemClickListener(onItemClickListener); //configuramos un escuchador para el adaptador
         ////navegacion de  botonoes de  la lista de prtoductos/////
-        //botonComprar = (Button) view.findViewById(R.id.botton_buy);
 
         return view;
     }
