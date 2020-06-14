@@ -26,8 +26,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
-    private static final String TAG_LIST_FRAGMENT="TAG_LIST_FRAGMENT";
-    ProductoListFragment mProductoListFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

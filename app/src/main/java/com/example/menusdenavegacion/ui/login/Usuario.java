@@ -14,11 +14,16 @@ import java.util.Date;
 public class Usuario {
     private String mId;
     private String mEmail;
+    private String mPassword;
     private String mNombre;
     private Location mLocation;
     private double mSaldo;
     private String mTelefono;
     private String mUrlFoto;
+
+    public Usuario() {
+        //constructor por defecto
+    }
 
     public ArrayList<Producto> getUsuarioListaProductos() {
         return usuarioListaProductos;
@@ -38,6 +43,9 @@ public class Usuario {
     }
     public String getEmail() {
         return mEmail;
+    }
+    public String getPassword() {
+        return mPassword;
     }
     public String getNombre() {
         return mNombre;
@@ -61,9 +69,10 @@ public class Usuario {
     public String getUrlFoto(){
         return mUrlFoto;
     }
-    public Usuario(String id, String email, String nombre, Location location, double saldo, String Telefono, String urlFoto){
+    public Usuario(String id, String email, String password, String nombre, Location location, double saldo, String Telefono, String urlFoto){
         mId = id;
         mEmail = email;
+        mPassword = password;
         mNombre = nombre;
 //        usuarioListaProductos = listaProductos;
         mLocation = location;
