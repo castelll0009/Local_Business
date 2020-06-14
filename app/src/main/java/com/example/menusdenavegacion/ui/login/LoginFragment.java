@@ -27,9 +27,12 @@ import java.util.zip.Inflater;
 
 
 public class LoginFragment extends Fragment {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        Bundle objetoLista = getArguments();
 
         Button loginBoton;
         TextView textviewRegister;

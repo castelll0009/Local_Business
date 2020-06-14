@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RegisterFragment extends Fragment {
-    private ArrayList<Usuario> ListaUsuarios = new ArrayList<Usuario>();
+    public ArrayList<Usuario> ListaUsuarios = new ArrayList<Usuario>();
     //ArrayList<Usuario> ListaUsuarios = (ArrayList<Usuario>) getArguments().getSerializable("bundle_key");
         @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,11 +60,16 @@ public class RegisterFragment extends Fragment {
                 ListaUsuarios.add(new Usuario(varNombreCompleto, varEmail, varPassword, varTelefono));
                 informacionGlobal.SESION =true;
 
+                RegisterFragment registerFragment = new RegisterFragment();
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("listaUsuarios", ListaUsuarios);
+                registerFragment.setArguments(bundle);
+                FragmentTransaction fr = getFragmentManager().beginTransaction();
+                fr.replace(R.id.nav_host_fragment, new LoginFragment());
+                fr.addToBackStack(null); // no se paque sera
+                fr.commit();
             }
         });
         return view;
-    }
-    public List<Usuario> obtenerUsuario() {
-        return ListaUsuarios;
     }
 }
