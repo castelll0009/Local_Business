@@ -1,15 +1,16 @@
 package com.example.menusdenavegacion.ui.login;
 
 import android.content.Intent;
-import android.location.Location;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
-import android.provider.Settings;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,22 +18,39 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.menusdenavegacion.MainActivity;
-import com.example.menusdenavegacion.Producto;
 import com.example.menusdenavegacion.R;
+import com.example.menusdenavegacion.ui.gallery.GalleryViewModel;
 
 import java.util.ArrayList;
-import java.util.zip.Inflater;
-
 
 public class LoginFragment extends Fragment {
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public ArrayList<Usuario> ListaUsuarios = new ArrayList<Usuario>();
+    String nombreRecibido;
+    String emailRecibido;
+    String passwordRecibido;
+    String telefonoRecibido;
 
-        Bundle objetoLista = getArguments();
+    @Override
+    public View onCreateView(@Nullable LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        //recuperamos  valores desde le fragmento registro
+        Bundle bundle = getArguments();
+        if(bundle != null){
+            // handle your code here.
+            nombreRecibido = bundle.getString("NAME");
+            emailRecibido = bundle.getString("EMAIL");
+            passwordRecibido = bundle.getString("PASSWORD");
+            telefonoRecibido = bundle.getString("PHONE");
+            ListaUsuarios.add(new Usuario(nombreRecibido,emailRecibido,passwordRecibido,telefonoRecibido));
+
+        }else{
+            nombreRecibido = "default";
+            emailRecibido = "default";
+            passwordRecibido = "default";
+            telefonoRecibido = "default";
+        }
 
         Button loginBoton;
         TextView textviewRegister;
@@ -55,22 +73,34 @@ public class LoginFragment extends Fragment {
         loginBoton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Usuario  mUsuario   = new Usuario("111", "castell@unicauca.edu.co", "castillo","Esteban Castillo",null,50000,
-                        "3202486769","https://scontent-scl2-1.xx.fbcdn.net/v/t1.0-0/p206x206/50596823_2098927857085709_2754643194447659008_n.jpg?_nc_cat=109&_nc_sid=7aed08&_nc_ohc=FFL0bopQaagAX9-wOdS&_nc_ht=scontent-scl2-1.xx&_nc_tp=6&oh=77411b7771b7cbf31ad75850976c4cd5&oe=5F0B4F17");
-                String emailUsaurio = editTextNombreUsuario.getText().toString();
-                String passwordUsaurio = editTextPasswordUsuario.getText().toString();
-                if(mUsuario.getEmail().equals(emailUsaurio) && mUsuario.getPassword().equals(passwordUsaurio) ){
-                    // logro iniciar secion contraseña y correo validos
-                    informacionGlobal.SESION =true;
-                    Intent  i  = new Intent(getActivity(), MainActivity.class);
-                    //i.putExtra("TRUE",Lo)
+
+                String busquedaEmailUsuario = editTextNombreUsuario.getText().toString();
+                String busquedaPasswordUsaurio = editTextPasswordUsuario.getText().toString();
+                boolean encontrado = false;
+                for (int x = 0; x < ListaUsuarios.size(); x++) {
+                    Usuario user = ListaUsuarios.get(x);
+                    if (user.getEmail().equals(busquedaEmailUsuario)) {
+                        if (user.getPassword().equals(busquedaPasswordUsaurio)) {
+                            encontrado = true;
+                            break; // Terminar ciclo, pues ya lo encontramos
+                        }
+                    }
+                }
+                if (encontrado) { //entonces  debemos hacer el login sin problemas
+                    //cambiar el estado de  sesion y logear usuario
+                    informacionGlobal.SESION = true;
+                    Intent i = new Intent(getActivity(), MainActivity.class);
                     startActivity(i);
-                }else{
-                    Toast.makeText(getContext(), "El correo ó contraseña son incorrectos", Toast.LENGTH_LONG).show();
+                } else {
+                    //no logear usuario
+                    Toast.makeText(getContext(), "El correo ó contraseña son incorrectos, intentelo de nuevo.", Toast.LENGTH_LONG).show();
                 }
             }
+
         });
         return view;
     }
-
 }
+
+
+

@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -25,9 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RegisterFragment extends Fragment {
-    public ArrayList<Usuario> ListaUsuarios = new ArrayList<Usuario>();
-    //ArrayList<Usuario> ListaUsuarios = (ArrayList<Usuario>) getArguments().getSerializable("bundle_key");
-        @Override
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_register, container, false);
@@ -57,17 +56,25 @@ public class RegisterFragment extends Fragment {
                 String varPassword = password.getText().toString();
                 String varTelefono = telefono.getText().toString();
 
-                ListaUsuarios.add(new Usuario(varNombreCompleto, varEmail, varPassword, varTelefono));
                 informacionGlobal.SESION =true;
 
-                RegisterFragment registerFragment = new RegisterFragment();
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("listaUsuarios", ListaUsuarios);
+
+                bundle.putString("NAME",varNombreCompleto);
+                bundle.putString("EMAIL",varEmail);
+                bundle.putString("PASSWORD",varPassword);
+                bundle.putString("PHONE",varTelefono);
+               /*
+                RegisterFragment registerFragment = new RegisterFragment();
                 registerFragment.setArguments(bundle);
                 FragmentTransaction fr = getFragmentManager().beginTransaction();
                 fr.replace(R.id.nav_host_fragment, new LoginFragment());
-                fr.addToBackStack(null); // no se paque sera
+                //fr.addToBackStack(null); // no se paque sera
                 fr.commit();
+                */
+                LoginFragment loginFragment = new LoginFragment();
+                loginFragment.setArguments(bundle);
+                getParentFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,loginFragment).commit();
             }
         });
         return view;

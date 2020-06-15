@@ -1,6 +1,7 @@
 package com.example.menusdenavegacion.ui.login;
 
 import android.location.Location;
+import android.widget.EditText;
 import android.widget.ImageView;
 import androidx.databinding.BindingAdapter;
 
@@ -24,7 +25,6 @@ public class Usuario {
     public Usuario() {
         //constructor por defecto
     }
-
     public ArrayList<Producto> getUsuarioListaProductos() {
         return usuarioListaProductos;
     }
@@ -68,6 +68,10 @@ public class Usuario {
     }
     public String getUrlFoto(){
         return mUrlFoto;
+    }
+    public Usuario(String email, String password){
+        mEmail = email;
+        mPassword = password;
     }
     public Usuario(String nombre, String email, String password, String telefono){
         mNombre = nombre;
