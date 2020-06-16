@@ -27,7 +27,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorVerdeNegocio"
+        android:background="@color/verde_boton_login"
         android:onClick="onclick"
         android:text="Selecciona Imagen"
         android:textColor="#ffff" />
