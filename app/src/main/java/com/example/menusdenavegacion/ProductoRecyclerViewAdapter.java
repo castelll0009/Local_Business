@@ -83,9 +83,12 @@ public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 }
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+    // asigna los valores correcpondientes  a cada producto
         Producto producto = productosLista.get(position);
         holder.bindingProducto.setProducto(producto);
         holder.bindingProducto.executePendingBindings();
+
+
     }
     @Override
     public int getItemCount() {
