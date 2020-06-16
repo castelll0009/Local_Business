@@ -56,8 +56,6 @@ public class RegisterFragment extends Fragment {
                 String varPassword = password.getText().toString();
                 String varTelefono = telefono.getText().toString();
 
-                informacionGlobal.SESION =true;
-
                 Bundle bundle = new Bundle();
 
                 bundle.putString("NAME",varNombreCompleto);

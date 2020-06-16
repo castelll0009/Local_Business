@@ -3,6 +3,8 @@ package com.example.menusdenavegacion;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,7 +18,6 @@ import java.util.List;
 public class ProductoRecyclerViewAdapter extends RecyclerView.Adapter<ProductoRecyclerViewAdapter.ViewHolder> {
     //Step 1 of 3: Defines a variable for listening user interactions with the items list
     private static View.OnClickListener mOnItemClickListener; //variable que escuchara las interaciones con los items de la lista list_item_pruductos
-    private static View.OnClickListener botonComprarListener; //variable que escuchara las interaciones con los items de la lista list_item_pruductos
     private static final NumberFormat PRICE_FORMAT = new DecimalFormat("");
     //Step 2 of 3: Assign itemClickListener to your local View.OnClickListener variable
     public void setOnItemClickListener(View.OnClickListener itemClickListener) {
@@ -86,7 +87,6 @@ public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         holder.bindingProducto.setProducto(producto);
         holder.bindingProducto.executePendingBindings();
     }
-
     @Override
     public int getItemCount() {
     return productosLista.size();

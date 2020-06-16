@@ -1,19 +1,18 @@
 package com.example.menusdenavegacion;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.button.MaterialButtonToggleGroup;
+import com.example.menusdenavegacion.ui.login.LoginFragment;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -111,18 +110,16 @@ public class ProductoListFragment extends Fragment {
 }
 */
 
-public class   ProductoListFragment extends Fragment{
+public class   ProductoListFragment extends Fragment {
     private ArrayList<Producto> ListaProductos = new ArrayList<Producto>();
     private RecyclerView RecyclerViewProductos;
     private ProductoRecyclerViewAdapter adaptadorProductos;
     private LinearLayoutManager layoutManager;
-    private Producto adaptador;
-    View viewBotones;
     // set a listener to handle events from RecyclerView
-    private View.OnClickListener onItemClickListener = new View.OnClickListener() {
 
-        @Override
-        public void onClick(View view) {
+        private View.OnClickListener onItemClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
             //Step 4 of 4: Finally call getTag() on the view.
             // This viewHolder will have all required values.
             RecyclerView.ViewHolder viewHolder = (RecyclerView.ViewHolder) view.getTag();
@@ -132,7 +129,6 @@ public class   ProductoListFragment extends Fragment{
             // viewHolder.itemView;
             Producto thisItem = ListaProductos.get(position);
             //Toast.makeText(getContext(), "You Clicked: " + thisItem.getNombre(), Toast.LENGTH_SHORT).show();
-
             //Create the intent for navigation purposes; the context is the current Activity, so getActivity() must be called
             Intent i = new Intent(getActivity(), ProductoDetailActivity.class);
             //Set information in the intent for the next Activity
@@ -146,7 +142,6 @@ public class   ProductoListFragment extends Fragment{
             startActivity(i);
             //////////////////////////////////////////
         }
-
     };
     public ProductoListFragment(){
     }
@@ -156,7 +151,7 @@ public class   ProductoListFragment extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_producto_list, container, false);
-        Button botonComprar;
+        ///////////////////////////////////////////////////////////
 
         RecyclerViewProductos=(RecyclerView)view.findViewById(R.id.list);
         layoutManager= new LinearLayoutManager(getActivity());
