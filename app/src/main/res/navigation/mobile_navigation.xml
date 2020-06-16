@@ -5,11 +5,10 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/nav_lista_productos">
 
-    <fragment
-        android:id="@+id/nav_verder_producto"
+    <activity
+        android:id="@+id/productoVerderActivity"
         android:name="com.example.menusdenavegacion.ui.vender.ProductoVerderActivity"
-        android:label="@string/menu_verder_producto"
-        tools:layout="@layout/activity_verder_producto"/>
+        android:label="ProductoVerderActivity" />
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -36,4 +35,5 @@
         android:id="@+id/nav_registerFragment"
         android:name="com.example.menusdenavegacion.ui.login.RegisterFragment"
         android:label="RegisterFragment" />
+
 </navigation>

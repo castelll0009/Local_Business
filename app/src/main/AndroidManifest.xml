@@ -21,6 +21,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProductoDetailActivity"></activity>
+        <activity android:name=".ui.vender.ProductoVerderActivity"
+            android:label="@string/Vender_Productos">
+        </activity>
     </application>
 
 </manifest>

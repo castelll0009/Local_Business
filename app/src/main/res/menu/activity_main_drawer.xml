@@ -7,7 +7,7 @@
         <item  android:title="@string/menu_contizar">
             <menu>
                 <item
-                    android:id="@+id/nav_verder_producto"
+                    android:id="@+id/productoVerderActivity"
                     android:icon="@drawable/ic_menu_camera"
                     android:title="@string/menu_verder_producto" />
                 <item
