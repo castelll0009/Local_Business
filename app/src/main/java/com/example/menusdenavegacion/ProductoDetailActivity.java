@@ -53,7 +53,7 @@ public class ProductoDetailActivity extends AppCompatActivity implements View.On
         Picasso.get().load(getImagen).into(productoImagen);
 
 ///////////boton comprar//// por ahora gps
-        Button mapButton = (Button)findViewById(R.id.botton_buy_detail);
+        ImageView mapButton = (ImageView)findViewById(R.id.imageView_ubicacion_producto);
         mapButton.setOnClickListener(this);
 
     }
