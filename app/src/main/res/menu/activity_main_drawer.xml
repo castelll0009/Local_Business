@@ -7,9 +7,9 @@
         <item  android:title="@string/menu_contizar">
             <menu>
                 <item
-                    android:id="@+id/nav_home"
+                    android:id="@+id/nav_verder_producto"
                     android:icon="@drawable/ic_menu_camera"
-                    android:title="@string/menu_home" />
+                    android:title="@string/menu_verder_producto" />
                 <item
                     android:id="@+id/nav_gallery"
                     android:icon="@drawable/ic_menu_gallery"

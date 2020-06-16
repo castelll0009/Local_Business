@@ -26,4 +26,5 @@
     <string name="menu_iniciar_sesion">"Iniciar Sesión "</string>
     <string name="menu_cambiar_cuenta">Cambiar de cuenta</string>
     <string name="menu_cerrar_sesion">Cerrar sesión</string>
+    <string name="menu_verder_producto">Verder Productos</string>
 </resources>
