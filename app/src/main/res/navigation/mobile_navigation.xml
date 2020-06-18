@@ -17,12 +17,6 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.menusdenavegacion.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
         android:id="@+id/nav_lista_productos"
         android:name="com.example.menusdenavegacion.ProductoListFragment"
         android:label="@string/menu_lista_productos"
@@ -35,5 +29,9 @@
         android:id="@+id/nav_registerFragment"
         android:name="com.example.menusdenavegacion.ui.login.RegisterFragment"
         android:label="RegisterFragment" />
+    <activity
+        android:id="@+id/productoDetailActivity"
+        android:name="com.example.menusdenavegacion.ProductoDetailActivity"
+        android:label="ProductoDetailActivity" />
 
 </navigation>

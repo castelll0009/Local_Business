@@ -27,6 +27,9 @@
         <activity android:name=".ui.vender.ProductoVerderActivity"
             android:label="@string/Vender_Productos">
         </activity>
+        <activity android:name=".ui.comprar.ComprarPruductoActivity"
+            android:label="@string/comprar_producto">
+        </activity>
     </application>
 
 </manifest>

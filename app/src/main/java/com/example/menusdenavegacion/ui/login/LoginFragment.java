@@ -25,6 +25,7 @@ import com.example.menusdenavegacion.ui.gallery.GalleryViewModel;
 import java.util.ArrayList;
 
 public class LoginFragment extends Fragment {
+    public static  boolean SESION = false;
 
     public static ArrayList<Usuario> ListaUsuarios = new ArrayList<Usuario>();
     String nombreRecibido;
@@ -35,6 +36,7 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(@Nullable LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        /*
         //recuperamos  valores desde le fragmento registro
         Bundle bundle = getArguments();
         if(bundle != null){
@@ -50,7 +52,8 @@ public class LoginFragment extends Fragment {
             emailRecibido = "default";
             passwordRecibido = "default";
             telefonoRecibido = "default";
-        }
+        }*/
+        ListaUsuarios.add(new Usuario("1","1","1","1"));
 
         Button loginBoton;
         TextView textviewRegister;
@@ -88,12 +91,13 @@ public class LoginFragment extends Fragment {
                 }
                 if (encontrado) { //entonces  debemos hacer el login sin problemas
                     //cambiar el estado de  sesion y logear usuario
-                    informacionGlobal.SESION = true;
+                    SESION = true;
                     Intent i = new Intent(getActivity(), MainActivity.class);
                     startActivity(i);
                 } else {
                     //no logear usuario
                     Toast.makeText(getContext(), "El correo ó contraseña son incorrectos, intentelo de nuevo.", Toast.LENGTH_LONG).show();
+
                 }
             }
 

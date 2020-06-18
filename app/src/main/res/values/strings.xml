@@ -28,4 +28,6 @@
     <string name="menu_cerrar_sesion">Cerrar sesión</string>
     <string name="menu_verder_producto">Verder Productos</string>
     <string name="Vender_Productos">Vender Productos</string>
+    <string name="menu_buscar_producto">Buscar Producto</string>
+    <string name="comprar_producto">Comprar Producto</string>
 </resources>

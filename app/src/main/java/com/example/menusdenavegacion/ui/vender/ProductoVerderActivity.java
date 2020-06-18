@@ -8,8 +8,6 @@ import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Parcelable;
-import android.os.PersistableBundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -18,20 +16,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.menusdenavegacion.MainActivity;
 import com.example.menusdenavegacion.Producto;
-import com.example.menusdenavegacion.ProductoDetailActivity;
 import com.example.menusdenavegacion.ProductoListFragment;
 import com.example.menusdenavegacion.R;
-import com.example.menusdenavegacion.ui.login.Usuario;
-import com.squareup.picasso.Picasso;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 

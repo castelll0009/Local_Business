@@ -46,7 +46,7 @@
             android:layout_marginRight="16dp"
             android:background="@color/verde_boton_login"
             android:fontFamily="sans-serif-black"
-            android:text="Login"
+            android:text="Entrar "
             android:textColor="@color/blanco"
             android:textSize="13sp"
             app:layout_constraintBottom_toTopOf="@+id/createText"
@@ -134,7 +134,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:text="Iniciar sesión para poder vender y comprar productos !Facil y Rapido!" />
+            tools:text="Inicia sesión para poder vender y comprar productos !Facil y Rapido!" />
 
         <TextView
             android:id="@+id/createText"

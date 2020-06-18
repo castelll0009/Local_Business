@@ -7,9 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.example.menusdenavegacion.ui.comprar.ComprarPruductoActivity;
+import com.example.menusdenavegacion.ui.login.LoginFragment;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
@@ -55,6 +62,7 @@ public class ProductoDetailActivity extends AppCompatActivity implements View.On
         ImageView mapButton = (ImageView)findViewById(R.id.imageView_ubicacion_producto);
         mapButton.setOnClickListener(this);
 
+
     }
 
     @Override
@@ -70,5 +78,18 @@ public class ProductoDetailActivity extends AppCompatActivity implements View.On
         //Create an implicit intent the Android runtime will resolve to display the correct Activity (Google Maps)
 
         startActivity(new Intent(Intent.ACTION_VIEW, uri));
+    }
+
+    public void onClickComprar(View view) {
+
+        if(LoginFragment.SESION == true){
+
+            Intent intentComprar = new Intent(view.getContext(), ComprarPruductoActivity.class);
+            startActivity(intentComprar);
+        }else{
+            Toast.makeText(getApplicationContext(),
+                    "¡Debe Iniciar Sesión para  comprar productos!", Toast.LENGTH_LONG).show();
+
+        }
     }
 }

@@ -363,6 +363,7 @@
                     <Button
                         android:id="@+id/botton_buy_detail"
                         android:layout_width="match_parent"
+                        android:onClick="onClickComprar"
                         android:layout_height="match_parent"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"

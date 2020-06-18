@@ -7,21 +7,22 @@
         <item  android:title="@string/menu_contizar">
             <menu>
                 <item
+                    android:id="@+id/nav_lista_productos"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="@string/menu_lista_productos" />
+                <item
                     android:id="@+id/productoVerderActivity"
                     android:icon="@drawable/ic_menu_camera"
                     android:title="@string/menu_verder_producto" />
                 <item
                     android:id="@+id/nav_gallery"
                     android:icon="@drawable/ic_menu_gallery"
-                    android:title="@string/menu_gallery" />
+                    android:title="@string/menu_buscar_producto" />
                 <item
                     android:id="@+id/nav_slideshow"
                     android:icon="@drawable/ic_menu_slideshow"
                     android:title="@string/menu_slideshow" />
-                <item
-                    android:id="@+id/nav_lista_productos"
-                    android:icon="@drawable/ic_menu_share"
-                    android:title="@string/menu_lista_productos" />
+
             </menu>
         </item>
 
