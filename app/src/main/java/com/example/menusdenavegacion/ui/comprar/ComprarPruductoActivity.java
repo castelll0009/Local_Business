@@ -2,6 +2,7 @@ package com.example.menusdenavegacion.ui.comprar;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -16,5 +17,8 @@ public class ComprarPruductoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comprar_producto);
+    }
+
+    public void onClickComprar(View view) {
     }
 }

@@ -299,7 +299,6 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:hint="Agrega un comentario relacionado con el producto....................................................................................................................."
-                        android:onClick="onClickConf"
                         android:textColor="#000000"
                         android:textColorHint="@color/gris_hind"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -323,6 +322,7 @@
                         android:layout_centerVertical="true"
                         android:background="@drawable/boton_comfirmar_compra"
                         android:text="@string/texto_botton_confirmar"
+                        android:onClick="onClickComprar"
                         android:textColor="#FFFFFF"
                         tools:text="Confirmar Compra" />
 
