@@ -72,7 +72,7 @@
             android:id="@+id/forgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Forgot Password ?"
+            android:text="Olviaste tu Password?"
             android:textColor="#000000"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/progressBar"
@@ -112,6 +112,7 @@
             android:text="Iniciar Sesión"
             android:textColor="@color/verde_boton_login"
             android:textSize="25sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textView2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -121,24 +122,26 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="145dp"
-            android:layout_height="22dp"
+            android:layout_width="323dp"
+            android:layout_height="62dp"
             android:fontFamily="sans-serif"
+            android:gravity="center"
             android:text="Crear cuenta nueva"
-            android:textColor="#A8A8A8"
+            android:textColor="#000000"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/imageView2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:text="Iniciar sesión para poder vender y comprar productos !Facil y Rapido!" />
 
         <TextView
             android:id="@+id/createText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="New Here ?  Create Account"
+            android:text="Eres Nuevo Aqui?  Crea tu Cuenta."
             android:textColor="#000000"
             app:layout_constraintBottom_toTopOf="@+id/forgotPassword"
             app:layout_constraintEnd_toEndOf="parent"
