@@ -1,10 +1,13 @@
 package com.example.menusdenavegacion;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 import android.view.WindowManager;
+import android.widget.TextView;
 
+import com.example.menusdenavegacion.ui.vender.ProductoVerderActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -27,12 +30,17 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+/*
+        Bundle bundle = getIntent().getExtras();
+        String fraseimportada=bundle.getString("NAME_ADD");
+        String textoPasado = fraseimportada;*/
+//        boolean seCreo = ProductoVerderActivity.seCreoProducto;
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar); // Este método establece la barra de herramientas como la barra de la app de la actividad
         FloatingActionButton fab = findViewById(R.id.fab); //define un boton flotante en activity_main

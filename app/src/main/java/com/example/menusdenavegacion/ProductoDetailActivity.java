@@ -46,10 +46,9 @@ public class ProductoDetailActivity extends AppCompatActivity implements View.On
         TextView productoPrecio = (TextView) findViewById(R.id.button_precio);
 
         productoNombre.setText(getProductoNombre);
-        productoPropietario.setText("Propietario: " + getPropietario + " Telefono: " + getproductoTelefono + ". Puedes llamar al vendedor ahora mismo.");
+        productoPropietario.setText("Propietario: " + getPropietario + " Telefono: " + getproductoTelefono + " Puedes llamar al vendedor ahora mismo.");
 
         productoPrecio.setText(getPrecio);
-
         Picasso.get().load(getImagen).into(productoImagen);
 
 ///////////boton comprar//// por ahora gps

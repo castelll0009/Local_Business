@@ -2,6 +2,7 @@ package com.example.menusdenavegacion;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -111,7 +112,7 @@ public class ProductoListFragment extends Fragment {
 */
 
 public class   ProductoListFragment extends Fragment {
-    private ArrayList<Producto> ListaProductos = new ArrayList<Producto>();
+    public static ArrayList<Producto> ListaProductos = new ArrayList<Producto>();
     private RecyclerView RecyclerViewProductos;
     private ProductoRecyclerViewAdapter adaptadorProductos;
     private LinearLayoutManager layoutManager;

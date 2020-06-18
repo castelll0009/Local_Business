@@ -26,7 +26,7 @@ import java.util.ArrayList;
 
 public class LoginFragment extends Fragment {
 
-    public ArrayList<Usuario> ListaUsuarios = new ArrayList<Usuario>();
+    public static ArrayList<Usuario> ListaUsuarios = new ArrayList<Usuario>();
     String nombreRecibido;
     String emailRecibido;
     String passwordRecibido;
@@ -43,7 +43,7 @@ public class LoginFragment extends Fragment {
             emailRecibido = bundle.getString("EMAIL");
             passwordRecibido = bundle.getString("PASSWORD");
             telefonoRecibido = bundle.getString("PHONE");
-            ListaUsuarios.add(new Usuario(nombreRecibido,emailRecibido,passwordRecibido,telefonoRecibido));
+            //ListaUsuarios.add(new Usuario(nombreRecibido,emailRecibido,passwordRecibido,telefonoRecibido));
 
         }else{
             nombreRecibido = "default";

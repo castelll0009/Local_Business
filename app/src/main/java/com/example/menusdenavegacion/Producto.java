@@ -60,7 +60,9 @@ public class Earthquake {
 */
 
 import android.location.Location;
+import android.media.Image;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.databinding.BindingAdapter;
 
@@ -79,6 +81,7 @@ public class Producto {
     private String mPropietario;
     private String mTelefono;
     private String mUrlImage;
+    private ImageView mImage;
     private  int mIs_new;
 
     public int getIs_new() {
@@ -125,6 +128,9 @@ public class Producto {
     public String getUrlImage(){
         return mUrlImage;
     }
+    public ImageView getImage(){
+        return mImage;
+    }
 
 
     public Producto(String id, Date date, String nombre, Location location, double precio, String propietario, String Telefono, String urlImage, int is_new){
@@ -136,6 +142,17 @@ public class Producto {
         mPropietario = propietario;
         mTelefono = Telefono;
         mUrlImage = urlImage;
+        mIs_new = is_new;
+    }
+    public Producto(String id, Date date, String nombre, Location location, double precio, String propietario, String Telefono, ImageView image, int is_new){
+        mId = id;
+        mDate = date;
+        mNombre = nombre;
+        mLocation = location;
+        mPrecio = precio;
+        mPropietario = propietario;
+        mTelefono = Telefono;
+        mImage = image;
         mIs_new = is_new;
     }
 

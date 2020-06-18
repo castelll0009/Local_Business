@@ -40,7 +40,8 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/caja"
                         android:scaleType="matrix"
-                        app:imageUrl="@{producto.urlImage}"/>
+                        app:imageUrl="@{producto.urlImage}"
+                        />
 
 
                     <TextView
