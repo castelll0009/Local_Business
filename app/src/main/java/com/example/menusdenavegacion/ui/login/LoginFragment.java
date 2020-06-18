@@ -25,7 +25,7 @@ import com.example.menusdenavegacion.ui.gallery.GalleryViewModel;
 import java.util.ArrayList;
 
 public class LoginFragment extends Fragment {
-    public static  boolean SESION = false;
+    public static  boolean SESION = true;
 
     public static ArrayList<Usuario> ListaUsuarios = new ArrayList<Usuario>();
     String nombreRecibido;

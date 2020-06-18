@@ -30,4 +30,24 @@
     <string name="Vender_Productos">Vender Productos</string>
     <string name="menu_buscar_producto">Buscar Producto</string>
     <string name="comprar_producto">Comprar Producto</string>
+    <string name="texto_botton_confirmar">Confirmar Compra</string>
+
+    <string-array name="Barrios_veredas">
+            <item>El Primitivo Losada</item>
+            <item>La Nueva Esperanza</item>
+            <item>Betania</item>
+            <item>Percador</item>
+            <item>Las Aguilas</item>
+            <item>Cambis</item>
+            <item>CristoRey</item>
+    </string-array>
+
+    <string-array name="Metodos_de_Pago">
+        <item>Pago presencial</item>
+        <item>Tarjeta de Credito</item>
+        <item>Nequi</item>
+        <item>transferencia desde banco con PSE</item>
+        <item>Pago por efecty</item>
+    </string-array>
+
 </resources>

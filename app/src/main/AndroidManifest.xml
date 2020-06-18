@@ -23,11 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProductoDetailActivity"></activity>
+        <activity android:name=".ProductoDetailActivity">
+        </activity>
         <activity android:name=".ui.vender.ProductoVerderActivity"
             android:label="@string/Vender_Productos">
         </activity>
         <activity android:name=".ui.comprar.ComprarPruductoActivity"
+            android:theme="@style/AppTheme.NoActionBar"
             android:label="@string/comprar_producto">
         </activity>
     </application>
