@@ -39,29 +39,17 @@
                         android:foregroundGravity="center|fill"
                         android:scaleType="matrix" />
 
-                    <EditText
-                        android:id="@+id/textViewIsNew"
-                        android:layout_width="120dp"
-                        android:layout_height="23dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
+                    <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginStart="3dp"
-                        android:layout_marginLeft="3dp"
-                        android:layout_marginTop="233dp"
-                        android:layout_marginBottom="39dp"
-                        android:width="38dp"
-                        android:background="#000000"
-                        android:foregroundGravity="left"
-                        android:gravity="fill_horizontal|left"
-                        android:hint="+ Categoria"
-                        android:padding="2dp"
-                        android:textAlignment="center"
-                        android:textColor="#ffffff"
-                        android:textColorHint="#FFFFFF"
-                        android:textSize="12sp"
-                        tools:ignore="RtlCompat" />
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="24dp"
+                        android:entries="@array/categoria_producto" />
                     <!--android:visibility="@{producto.is_new == 0 ? View.INVISIBLE : View.VISIBLE}" -->
 
                 </RelativeLayout>
@@ -78,10 +66,12 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:layout_marginTop="-10dp"
-                        android:hint="+ Nombre Producto"
+                        android:hint="Nombre Producto"
                         android:textColor="@android:color/background_light"
                         android:textColorHint="#7C7C7C"
-                        android:textSize="18dp" />
+                        android:textColorLink="#FFFFFF"
+                        android:textSize="18dp"
+                        android:textStyle="italic" />
                     <!--android:text="@{producto.nombre}"-->
 
                     <EditText
@@ -92,12 +82,12 @@
                         android:layout_alignParentBottom="false"
                         android:layout_marginTop="0dp"
                         android:layout_marginBottom="-15dp"
-                        android:hint="+ Propietario"
+                        android:hint="Propietario"
                         android:textColor="#B8B8B8"
                         android:textColorHighlight="#FFFFFF"
                         android:textColorHint="#787878"
                         android:textSize="16dp"
-                        android:textStyle="normal" />
+                        android:textStyle="normal|italic" />
 
                     <ImageView
                         android:id="@+id/imageView3"
@@ -122,7 +112,7 @@
                         android:layout_marginRight="2dp"
                         android:shadowColor="#808080"
                         android:text="Agregar Imagen"
-                        android:textColor="@color/colorNaranjaNegocio" />
+                        android:textColor="@color/colorVerdeNegocio" />
 
                 </RelativeLayout>
 
@@ -159,7 +149,7 @@
                             android:layout_marginBottom="2dp"
                             android:background="@drawable/textview_border_background"
                             android:gravity="center_horizontal"
-                            android:hint="+ Agregar "
+                            android:hint="Agregar  numero"
                             android:inputType="number|phone"
                             android:padding="2dp"
                             android:textAlignment="center"
@@ -198,6 +188,7 @@
                         android:inputType="numberDecimal"
                         android:textColor="#FFFFFF"
                         android:textColorHint="#9A9A9A"
+                        android:textColorLink="#FFFFFF"
                         android:textSize="24sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/textView5"
@@ -256,10 +247,12 @@
                         android:id="@+id/agregar_descripcion"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:hint="+ Aqui puede agregar una breve descripcion de su producto."
+                        android:hint="Aqui puede agregar una breve descripcion de su producto."
                         android:textColor="#FFFFFF"
                         android:textColorHighlight="#9F9F9F"
                         android:textColorHint="#BDBCBC"
+                        android:textColorLink="#FFFFFF"
+                        android:textStyle="italic"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/textView"

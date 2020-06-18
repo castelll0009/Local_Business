@@ -50,4 +50,13 @@
         <item>Pago por efecty</item>
     </string-array>
 
+    <string-array name="categoria_producto">
+        <item>Comida</item>
+        <item>Infromatica</item>
+        <item>Electrodomestico</item>
+        <item>Decorcion</item>
+        <item>Abarrotes</item>
+        <item>Estudiantil</item>
+    </string-array>
+
 </resources>
