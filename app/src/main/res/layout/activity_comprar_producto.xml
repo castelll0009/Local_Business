@@ -300,7 +300,7 @@
                         android:layout_height="wrap_content"
                         android:hint="Agrega un comentario relacionado con el producto....................................................................................................................."
                         android:onClick="onClickConf"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#000000"
                         android:textColorHint="@color/gris_hind"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
