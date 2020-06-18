@@ -71,7 +71,7 @@
                         android:textColorHint="#7C7C7C"
                         android:textColorLink="#FFFFFF"
                         android:textSize="18dp"
-                        android:textStyle="italic" />
+                        android:textStyle="normal" />
                     <!--android:text="@{producto.nombre}"-->
 
                     <EditText
@@ -87,7 +87,7 @@
                         android:textColorHighlight="#FFFFFF"
                         android:textColorHint="#787878"
                         android:textSize="16dp"
-                        android:textStyle="normal|italic" />
+                        android:textStyle="normal" />
 
                     <ImageView
                         android:id="@+id/imageView3"
@@ -252,7 +252,7 @@
                         android:textColorHighlight="#9F9F9F"
                         android:textColorHint="#BDBCBC"
                         android:textColorLink="#FFFFFF"
-                        android:textStyle="italic"
+                        android:textStyle="normal"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/textView"
