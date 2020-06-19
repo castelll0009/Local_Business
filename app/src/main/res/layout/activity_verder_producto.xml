@@ -258,7 +258,7 @@
                     android:id="@+id/boton_publicar_producto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/boton_comfirmar_compra_azul"
+                    android:background="@drawable/boton_comfirmar_compra"
                     android:onClick="publicarProducto"
                     android:text="Publicar producto"
                     android:textColor="#FFFFFF" />
@@ -271,7 +271,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-2dp"
                 android:layout_marginBottom="-2dp"
-                android:background="#2196F3"
+                android:background="#000000"
                 android:gravity="center"
                 android:text="Vista previa de su producto"
                 android:textColor="@color/blanco"
