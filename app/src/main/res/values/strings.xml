@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Menus de Navegacion</string>
+    <string name="app_name">Local Business</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -35,13 +35,13 @@
     <string name="app_label">Local Bussines</string>
 
     <string-array name="Barrios_veredas">
-            <item>El Primitivo Losada</item>
-            <item>La Nueva Esperanza</item>
-            <item>Betania</item>
-            <item>Percador</item>
-            <item>Las Aguilas</item>
-            <item>Cambis</item>
-            <item>CristoRey</item>
+        <item>El Primitivo Losada</item>
+        <item>La Nueva Esperanza</item>
+        <item>Betania</item>
+        <item>Percador</item>
+        <item>Las Aguilas</item>
+        <item>Cambis</item>
+        <item>CristoRey</item>
     </string-array>
 
     <string-array name="Metodos_de_Pago">

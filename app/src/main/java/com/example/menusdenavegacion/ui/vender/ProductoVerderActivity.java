@@ -129,7 +129,7 @@ public class ProductoVerderActivity extends AppCompatActivity {
 
         Date now = Calendar.getInstance().getTime(); // para obtener  la hora actual
         ProductoListFragment.ListaProductos.add(new Producto("5",now,varNombre,null ,varPrecioDouble,varPropietario,varTelefono,
-                "https://scontent-scl2-1.xx.fbcdn.net/v/t1.0-9/104165246_2474398966205261_8533160042302412057_n.jpg?_nc_cat=102&_nc_sid=e007fa&_nc_eui2=AeH_Z_tY5YfmrPu-lJ-sOSHJWO189vMnetJY7Xz28yd60ktaFUDEyjgJuAvCjnVVtkN5BYzQCUaJuwObIsaLV9jL&_nc_ohc=H1-l6NqWw8MAX9C4iqq&_nc_ht=scontent-scl2-1.xx&oh=30434eb5d54f342571d3048cd6fc91af&oe=5F11BD51",1));
+                "https://scontent-scl2-1.xx.fbcdn.net/v/t1.0-9/104752193_2474618416183316_1208864249915735800_n.jpg?_nc_cat=102&_nc_sid=e007fa&_nc_eui2=AeEpKRDpGhHSzIv2cuZPtHxgJb5fCGlBKtUlvl8IaUEq1WaUncpsacVJ8hOdvmdzn6wh6CEqwY61LuZPW_Q0-iIt&_nc_ohc=061vOi_CJUoAX9lSRBR&_nc_ht=scontent-scl2-1.xx&oh=b0a9b325912528d113a6a51e14bd9c83&oe=5F101929",1));
         Toast.makeText(getApplicationContext(), "Se ha publicado  su producto con ¡Exito!, los usuarios podran verlo  en la lista de productos y comprarlo.", Toast.LENGTH_LONG).show();
     }
 }

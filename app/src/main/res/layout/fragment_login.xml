@@ -44,7 +44,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:background="@color/verde_boton_login"
+            android:background="#2196F3"
             android:fontFamily="sans-serif-black"
             android:text="Entrar "
             android:textColor="@color/blanco"
@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:text="Iniciar Sesión"
-            android:textColor="@color/verde_boton_login"
+            android:textColor="#2196F3"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textView2"
@@ -126,9 +126,9 @@
             android:layout_height="62dp"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:text="Crear cuenta nueva"
+            android:text="Inicia sesión para poder vender y comprar productos !Facil y Rapido!"
             android:textColor="#000000"
-            android:textSize="15sp"
+            android:textSize="20dp"
             app:layout_constraintBottom_toTopOf="@+id/imageView2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -158,7 +158,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:srcCompat="@drawable/ic_account_box_black_24dp" />
+            app:srcCompat="@drawable/foreground_azul" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

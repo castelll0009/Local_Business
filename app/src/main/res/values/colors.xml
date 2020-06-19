@@ -12,5 +12,6 @@
     <color name="color_boton_login">#00C508</color>
     <color name="verde_boton_login">#4CAF50</color>
     <color name="gris_hint">#888888</color>
+    <color name="previa">#C3009688</color>
 
 </resources>

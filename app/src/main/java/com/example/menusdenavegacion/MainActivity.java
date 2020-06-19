@@ -32,18 +32,17 @@ public class  MainActivity extends AppCompatActivity {
         String fraseimportada=bundle.getString("NAME_ADD");
         String textoPasado = fraseimportada;*/
 //        boolean seCreo = ProductoVerderActivity.seCreoProducto;
-        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar); // Este método establece la barra de herramientas como la barra de la app de la actividad
-        FloatingActionButton fab = findViewById(R.id.fab); //define un boton flotante en activity_main
+       /* FloatingActionButton fab = findViewById(R.id.fab); //define un boton flotante en activity_main
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG) //barra que se despliega
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout); //creamos un contenedor drawer sobre el cual se pondran las otras views
         NavigationView navigationView = findViewById(R.id.nav_view);

@@ -79,6 +79,8 @@ public class   ProductoListFragment extends Fragment {
     public List<Producto> obtenerProducto() {
 
         Date now = Calendar.getInstance().getTime(); // para obtener  la hora actual
+        ListaProductos.add(new Producto("6",now,"Computador Antiguo de mesa antiguo ",null ,100000,"Fernando Andres Castillo","3134445589",
+                "https://scontent-scl2-1.xx.fbcdn.net/v/t1.0-9/104294105_2474618409516650_2495538379981589705_n.jpg?_nc_cat=100&_nc_sid=e007fa&_nc_eui2=AeHeJ2iXQeD3-QCPtDNqwW_KvOQ_gxWyV1i85D-DFbJXWIooDnKTFlkkuW4fY8dL-0Sa6d5HT5hOzwDl9DOGcV9G&_nc_ohc=hZUklit1dvwAX_hpjFj&_nc_ht=scontent-scl2-1.xx&oh=704b31fb1aa6b044adc69ab89b42ec35&oe=5F1049FD", 0));
         ListaProductos.add(new Producto("0",now,"Arepas rellenas de carne",null,3000,"Jhojan Herrera el pri","3118978755",
                 "https://scontent-scl1-1.xx.fbcdn.net/v/t1.0-9/100823282_2460372657607892_6174919290852999168_n.jpg?_nc_cat=111&_nc_sid=e007fa&_nc_ohc=VQLnFLGIccAAX8a_F0g&_nc_ht=scontent-scl1-1.xx&oh=e19cd19994975f51ef8e1d5ee65c8437&oe=5EFA555F", 0));
         ListaProductos.add(new Producto("2",now,"Moto Kawasaki",null ,800000,"Yohan buritica","3118978755",

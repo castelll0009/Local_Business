@@ -25,7 +25,7 @@ import com.example.menusdenavegacion.ui.gallery.GalleryViewModel;
 import java.util.ArrayList;
 
 public class LoginFragment extends Fragment {
-    public static  boolean SESION = true;
+    public static  boolean SESION = false;
 
     public static ArrayList<Usuario> ListaUsuarios = new ArrayList<Usuario>();
     String nombreRecibido;
@@ -53,7 +53,6 @@ public class LoginFragment extends Fragment {
             passwordRecibido = "default";
             telefonoRecibido = "default";
         }*/
-        ListaUsuarios.add(new Usuario("1","1","1","1"));
 
         Button loginBoton;
         TextView textviewRegister;
