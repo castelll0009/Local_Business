@@ -31,6 +31,8 @@
     <string name="menu_buscar_producto">Buscar Producto</string>
     <string name="comprar_producto">Comprar Producto</string>
     <string name="texto_botton_confirmar">Confirmar Compra</string>
+    <string name="barra_busqueda">Buscar productos...</string>
+    <string name="app_label">Local Bussines</string>
 
     <string-array name="Barrios_veredas">
             <item>El Primitivo Losada</item>
